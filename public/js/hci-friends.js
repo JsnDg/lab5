@@ -20,7 +20,8 @@ function initializePage() {
 
 $(".listener").click(function(e) {
 	e.preventDefault();
-	$(".listener").text(anagrammedName($(this).text()));
+	var friendName = anagrammedName($(this).text());
+	$(".listener").text(friendName);
 });
 
 function anagrammedName(name) {
