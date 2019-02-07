@@ -5,7 +5,11 @@ $(document).ready(function() {
 	initializePage();
 })
 
-$(".listener").click(preventDefault());
+
+/*	
+	var friendListener = $(this).text();
+	text(anagrammedName($(friendListener).text()));
+*/
 
 /*
  * Function that is called when the document is ready.
@@ -13,6 +17,11 @@ $(".listener").click(preventDefault());
 function initializePage() {
 	console.log("Javascript connected!");
 }
+
+$(".listener").click(function(e) {
+	e.preventDefault();
+	$(".listener").text(anagrammedName($(this).text()));
+});
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
