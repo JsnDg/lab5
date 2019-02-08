@@ -21,7 +21,7 @@ function initializePage() {
 $(".listener").click(function(e) {
 	e.preventDefault();
 	var friendName = anagrammedName($(this).text());
-	$(".listener").text(friendName);
+	$(this).text(friendName);
 });
 
 function anagrammedName(name) {
